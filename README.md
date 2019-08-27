@@ -15,10 +15,11 @@
 
 倒腾了一两周总算把个人博客网站完善了，目前这个版本使用应该是够了，当然还有一些优化项和功能增加后续在慢慢更新，为了回馈开源，今天准备把我自己修改完善的`blog`网站源代码开源。这不是生成后的网页文件，是您可以直接使用的源码，您只需要把博客相关信息换成您自己的就可以部署了，对于新手或者不懂编程的小伙伴来说，简直是福音，极大简化了您构建博客的工作量和复杂度，每个人都可以下载并修改成自己喜欢样式！如果你有修改想法，欢迎PR！最后，我们还是给这个开源小项目取个名字吧，不知道取啥，就叫[hexo-blog-fly](https://github.com/shw2018/hexo-blog-fly.git)吧，怎么样？<<<<<[源代码下载](https://github.com/shw2018/hexo-blog-fly)>>>>>
 
-> 博客基于`Hexo`框架搭建，用到[hexo-theme-matery](https://github.com/shw2018/hexo-theme-matery)主题,并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：[https://shw2018.github.io](https://shw2018.github.io/)，博客演示：[sunhwee.com](https://shw2018.github.io/)。
+博客基于`Hexo`框架搭建，用到[hexo-theme-matery](https://github.com/shw2018/hexo-theme-matery)主题,并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：[https://shw2018.github.io](https://shw2018.github.io/)，博客演示：[sunhwee.com](https://shw2018.github.io/)。
 
 
-> 简单使用方法：
+**简单使用方法：**
+
 1. `star` 本项目
 1. 安装[Git](https://git-scm.com/downloads), 安装[nodeJS](https://nodejs.org/en/)
 2. 你可以直接`fork`一份源码到你的仓库，`clone`到本地
@@ -28,6 +29,8 @@
 
 
 >**更多详情教程，强烈推荐看我写的：[Hexo+Github博客搭建完全教程](https://sunhwee.com/2019/08/10/hexo-blog-tutorial/)**
+
+有什么问题可以在文章最后评论区**留言和讨论**，当然，欢迎点击文章最后的打赏按键，请博主一杯冰阔乐，笑～
 
 >**最后，如果项目和教程对你有所帮助或者你看见了还算比较喜欢，欢迎给我`star`，谢谢您！**
 
