@@ -1,0 +1,51 @@
+<!-- shw2018 洪卫  add 2019.08.10-->
+<style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+</style>
+
+<%- partial('_partial/bg-cover') %>
+
+<main class="content">
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+
+                <div class="music-player">
+                    <div class="title center-align">
+                        <i class="fa fa-music"></i>&nbsp;&nbsp;<%- theme.music.title %>
+                    </div>
+                    <% if (theme.music && theme.music.enable) { %>
+                        <%- partial('_widget/music') %>
+                    <% } %>
+
+                </div>
+
+                <% if (theme.video && theme.video.enable) { %>
+                <%- partial('_widget/video') %>
+                <% } %>
+
+                <% if (theme.myGallery && theme.myGallery.enable) { %>
+                <%- partial('_widget/my-gallery') %>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content article-card-content">
+                        <div class="title center-align" data-aos="zoom-in-up">
+                            <i class="fa fa-download"></i>&nbsp;&nbsp;<%- __('资源共享') %>
+                        </div>
+                        <div id="articleContent" data-aos="fade-up">
+                            <%- page.content %>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>
