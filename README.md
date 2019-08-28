@@ -1,6 +1,6 @@
 # shw2018.github.io
 ---
-<p align="center"><a href="https://shw2018.github.io" target="_blank" rel="noopener noreferrer"><img width="100" src=" https://sunhwee.com/favicon.png" alt="Blog logo"></a></p>
+<p align="center"><a href="https://sunhwee.com" target="_blank" rel="noopener noreferrer"><img width="100" src=" https://sunhwee.com/favicon.png" alt="Blog logo"></a></p>
 
 <p align="center">
   <a href="https://travis-ci.com/shw2018/MyBlog"><img src="https://travis-ci.com/shw2018/shw2018.github.io.svg" alt="Build Status"></a>
@@ -28,13 +28,15 @@
 5. 运行命令`hexo  clean`（清除生成文件），`hexo g`（生成网页）， `hexo  s`（本地预览），`hexo d`（部署）
 
 
->**更多详情教程，强烈推荐看我写的：[Hexo+Github博客搭建完全教程](https://sunhwee.com/2019/08/10/hexo-blog-tutorial/)**
-
-有什么问题可以在文章最后评论区**留言和讨论**，当然，欢迎点击文章最后的打赏按键，请博主一杯冰阔乐，笑～
+>**更多详情教程，强烈推荐看我写的：[Hexo+Github博客搭建完全教程](https://sunhwee.com/posts/6e8839eb.html)**
 
 >**最后，如果项目和教程对你有所帮助或者你看见了还算比较喜欢，欢迎给我`star`，谢谢您！**
 
-
+有什么问题可以在文章最后评论区**留言和讨论**，当然，欢迎点击文章最后的打赏按键，请博主一杯冰阔乐，笑～
+<p align="center">
+<img width="100" src="https://sunhwee.com/medias/reward/alipay.bmp" >
+<img width="100" src="https://sunhwee.com/medias/reward/wechat.bmp" >
+<img width="100" src="https://sunhwee.com/medias/reward/zan.png" ></a></p>
 
 ## License
 ---
