@@ -13,9 +13,9 @@
 
 倒腾了一两周总算把个人博客网站完善了，目前这个版本使用应该是够了，当然还有一些优化项和功能增加后续在慢慢更新，为了回馈开源，今天准备把我自己修改完善的`blog`网站源代码开源。这不是生成后的网页文件，是您可以直接使用的源码，您只需要把博客相关信息换成您自己的就可以部署了，对于新手或者不懂编程的小伙伴来说，简直是福音，极大简化了您构建博客的工作量和复杂度，每个人都可以下载并修改成自己喜欢样式！如果你有修改想法，欢迎PR！最后，我们还是给这个开源小项目取个名字吧，不知道取啥，就叫[hexo-blog-fly](https://github.com/shw2018/hexo-blog-fly.git)吧，怎么样？<<<<<[源代码下载](https://github.com/shw2018/hexo-blog-fly)>>>>>
 
-> **博客基于`Hexo`框架搭建，用到[hexo-theme-matery](https://github.com/shw2018/hexo-theme-matery)主题,并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：[https://shw2018.github.io](https://shw2018.github.io/)，博客演示：[sunhwee.com](https://shw2018.github.io/)。**
+**博客基于`Hexo`框架搭建，用到[hexo-theme-matery](https://github.com/shw2018/hexo-theme-matery)主题,并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：[https://shw2018.github.io](https://shw2018.github.io/)，博客演示：[sunhwee.com](https://shw2018.github.io/)。**
 
-> **简单使用方法**：
+**简单使用方法**：
 1. `star` 本项目
 2. 安装[Git](https://git-scm.com/downloads), 安装[nodeJS](https://nodejs.org/en/)
 3. 你可以直接`fork`一份源码到你的仓库，`clone`到本地
@@ -35,7 +35,7 @@
 
 ## 特性
 
-> **原主题特性**:
+**原主题特性**:
 
 - 简单漂亮，文章内容美观易读
 - [Material Design](https://material.io/) 设计
@@ -55,7 +55,7 @@
 - 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析（`Google Analytics`）和文章字数统计等功能
 - 支持在首页的音乐播放和视频播放功能
 
- > **增加的工作或特性(未打钩的是已做但还没更新到源码的)**:
+ **增加的工作或特性(未打钩的是已做但还没更新到源码的)**:
 
 - [x] 修改了原主题的一些很多`bug`
 - [x] 加入图片懒加载功能，在根目录配置文件开启和关闭
