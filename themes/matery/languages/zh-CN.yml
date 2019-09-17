@@ -79,3 +79,8 @@ copy_success: 复制成功
 copy_failure: 复制失败
 
 article: 文章
+
+# 2019.08.28
+galleries: 相册
+# 2019.09.17
+list: 清单

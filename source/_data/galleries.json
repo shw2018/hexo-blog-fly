@@ -1,0 +1,46 @@
+[
+  {
+    "name": "背景图片3",
+    "cover": "背景图片/bg_pic_107.jpg",
+    "description": "背景图片",
+    "photos": [
+      "背景图片/bg_pic_101.jpg",
+      "背景图片/bg_pic_102.jpg",
+      "背景图片/bg_pic_103.jpg",
+      "背景图片/bg_pic_104.jpg",
+      "背景图片/bg_pic_105.jpg",
+      "背景图片/bg_pic_106.jpg",
+      "背景图片/bg_pic_107.jpg",
+      "背景图片/bg_pic_108.jpg",
+      "背景图片/bg_pic_109.jpg",
+      "背景图片/bg_pic_110.jpg",
+      "背景图片/bg_pic_111.jpg",
+      "背景图片/bg_pic_112.jpg",
+      "背景图片/bg_pic_113.jpg"
+    ]
+  },
+  {
+    "name": "背景图片4",
+    "cover": "背景图片/bg_pic_130.jpg",
+    "description": "背景图片",
+    "photos": [
+      "背景图片/bg_pic_151.jpg",
+      "背景图片/bg_pic_152.jpg",
+      "背景图片/bg_pic_153.jpg",
+      "背景图片/bg_pic_154.jpg",
+      "背景图片/bg_pic_155.jpg",
+      "背景图片/bg_pic_156.jpg",
+      "背景图片/bg_pic_157.jpg",
+      "背景图片/bg_pic_158.jpg",
+      "背景图片/bg_pic_159.jpg",
+      "背景图片/bg_pic_160.jpg",
+      "背景图片/bg_pic_161.jpg",
+      "背景图片/bg_pic_162.jpg",
+      "背景图片/bg_pic_163.jpg",
+      "背景图片/bg_pic_164.jpg",
+      "背景图片/bg_pic_165.jpg"
+    ]
+  }
+]
+
+

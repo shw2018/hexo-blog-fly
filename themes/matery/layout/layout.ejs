@@ -1,33 +1,142 @@
 <!DOCTYPE HTML>
 <html lang="<%= config.language %>">
-<%- partial('_partial/head') %>
+    <%- partial('_partial/head') %>
 
-<body>
+    <body>
 
-    <%- partial('_partial/header') %>
-    <%- body %>
-    <%- partial('_partial/footer') %>
+        <%- partial('_partial/header') %>
+        <%- body %>
+        <%- partial('_partial/footer') %>
 
-    <%- partial('_partial/search') %>
-    <%- partial('_partial/back-top') %>
+        <%- partial('_partial/search') %>
+        <%- partial('_partial/back-top') %>
 
-    <script src="<%- theme.libs.js.materialize %>"></script>
-    <script src="<%- theme.libs.js.masonry %>"></script>
-    <script src="<%- theme.libs.js.aos %>"></script>
-    <script src="<%- theme.libs.js.scrollProgress %>"></script>
-    <script src="<%- theme.libs.js.lightgallery %>"></script>
-    <script src="/js/matery.js"></script>
+        <script src="<%- theme.libs.js.materialize %>"></script>
+        <script src="<%- theme.libs.js.masonry %>"></script>
+        <script src="<%- theme.libs.js.aos %>"></script>
+        <script src="<%- theme.libs.js.scrollProgress %>"></script>
+        <script src="<%- theme.libs.js.lightgallery %>"></script>
+        <script src="<%- theme.libs.js.matery %>"></script>
 
-    <%- partial('_partial/google-analytics') %>
+        <%- partial('_partial/google-analytics') %>
 
-    <% if (theme.clicklove.enable) { %>
-        <script src="<%- theme.libs.js.clicklove %>"></script>
-    <% } %>
-    
-    <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-        <script async src="<%- theme.libs.js.busuanzi %>"></script>
-    <% } %>
-    
-</body>
+        <% if (theme.clicklove.enable) { %>
+            <script src="<%- theme.libs.js.clicklove %>"></script>
+        <% } %>
 
+        <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+            <script async src="<%- theme.libs.js.busuanzi %>"></script>
+        <% } %>
+
+        <!-- 洪卫 shw2018 add 2019.08.28 -->
+        <script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+                    "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
+
+        <!-- 鼠标点击烟花爆炸效果  洪卫 shw2018 add 2019.09.09 -->
+        <% if (theme.fireworks.enable) { %>
+            <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
+            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+            <script type="text/javascript" src="/js/fireworks.js"></script>
+        <% } %>
+
+        <!-- 背景雪花飘落特效洪卫 shw2018 add 2019.09.10 -->
+        <% if (theme.sakura.enable) { %>
+            <script type="text/javascript">
+            //只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+            }
+            </script>
+        <% } %>
+
+        <!-- 鼠标点击文字特效 洪卫 shw2018 add 2019.09.10-->
+        <% if (theme.wenzi.enable) { %>
+            <script src="/js/wenzi.js" type="text/javascript"></script>
+        <% } %>
+
+        <!-- 背景雪花飘落特效 洪卫 shw2018 add 2019.09.10 -->
+        <% if (theme.xuehuapiaoluo.enable) { %>
+            <script type="text/javascript">
+                var windowWidth = $(window).width();
+                if (windowWidth > 768) {
+                    document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
+                }
+            </script>
+        <% } %>
+
+        <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->
+        <% if (theme.tidio.enable) { %>
+            <script src="//code.tidio.co/<%- theme.tidio.public_key %>.js"></script>
+            <!--  在线聊天位置自定义  洪卫 shw2018 add 2019.09.13  -->
+            <script> 
+                $(document).ready(function () {
+
+                    setInterval(change_Tidio, 50);  
+                    function change_Tidio() { 
+
+                        var tidio=$("#tidio-chat iframe");
+                        if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"80px":"20px";   
+                            document.getElementById("tidio-chat-iframe").style.right="-15px";   
+                            document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        } 
+                        else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;   
+                            document.getElementById("tidio-chat-iframe").style.right="-15px"; 
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        }
+                        else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;   
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        }
+
+                        if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                            document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                        }
+                    } 
+                }); 
+            </script>
+        <% } %>
+
+        <!-- 背景 canvas-nest  洪卫 shw 2018  add 2019.09.15-->
+        <% if (theme.canvas_nest.enable) { %>
+            <script type="text/javascript">
+            var windowWidth = $(window).width();
+            if (windowWidth > 992) {
+                document.write('<script type="text/javascript" color="<%- theme.canvas_nest.color %>" pointColor="<%- theme.canvas_nest.pointColor %>" opacity= "<%- theme.canvas_nest.opacity %>" zIndex="-<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"src="<%- theme.libs.js.canvas_nest %>"><\/script>');
+            }
+            </script>
+        <% } %>
+
+        <!-- 背景静止彩带  洪卫 shw 2018  add 2019.09.15-->
+        <% if (theme.ribbon.enable) { %>
+            <script type="text/javascript">
+            var windowWidth = $(window).width();
+            if (windowWidth > 992) {
+                document.write('<script type="text/javascript" size="<%- theme.ribbon.size %>" alpha="<%- theme.ribbon.alpha %>" zIndex="<%- theme.ribbon.zIndex %>" src="<%- theme.libs.js.ribbon %>"><\/script>');
+            }
+            </script>
+        <% } %>
+
+        <!-- 背景动态彩带 洪卫 shw 2018  add 2019.09.15-->
+        <% if (theme.ribbon_dynamic.enable) { %>
+            <script type="text/javascript">
+            var windowWidth = $(window).width();
+            if (windowWidth > 992) {
+                document.write('<script type="text/javascript" src="<%- theme.libs.js.ribbon_dynamic %>"><\/script>');
+            }
+            </script>
+        <% } %>
+
+    </body>
 </html>

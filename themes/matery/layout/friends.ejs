@@ -9,7 +9,7 @@
         border-radius: 50%;
     }
 
-    /* 一下是按钮样式 */
+    /* 以下是按钮样式 */
 
     .frind-ship {
         padding: 10px 20px;
@@ -32,7 +32,8 @@
     }
 
     .frind-ship .title h1 {
-        line-height: auto;
+        /* line-height: auto; */
+        line-height: 0.8rem;
         padding-bottom: 16px;
         border-bottom: 2px solid #fff;
     }
@@ -173,6 +174,19 @@
     .frind-card10 {
         background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
     }
+
+    /* 洪卫 shw2018 add 2019.08.30 */
+    .friend-introduction {
+        min-height: 3rem;
+    }
+    /* 修复卡片底部按键被裁减问题  洪卫 shw2018 add 2019.09.01 */
+    article .card {
+    overflow: visible !important;
+}
+    /* .f-card {
+        overflow: visible !important;
+    }  */
+
 </style>
 
 <main class="content">
@@ -190,11 +204,13 @@
                                 <img src="<%- friend.avatar %>" alt="img">
                                 <div>
                                     <h1 class="friend-name"><%- friend.name %></h1>
-                                    <p><%- friend.introduction %></p>
+                                    <!-- 洪卫 shw2018 modify 2019.08.30 -->
+                                    <p class="friend-introduction"><%- friend.introduction %></p>
+                                    <!-- <p><%- friend.introduction %></p> -->
                                 </div>
                             </div>
                             <div class="friend-button">
-                                <a href="<%- friend.url %>" target="_blank" 
+                                <a href="<%- friend.url %>" target="_blank"
                                     class="button button-glow button-rounded button-caution">
                                     <%- friend.title %>
                                 </a>
@@ -210,9 +226,9 @@
 </main>
 
 <script>
-$(function () {
-    $('#friends-link').masonry({
-        itemSelector: '.friend-div'
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
     });
-});
 </script>

@@ -17,6 +17,9 @@ menu:
   AV:
     url: /AV
     icon: fa-music
+  Galleries:
+    url: /galleries
+    icon: fa-photo
   About:
     url: /about
     icon: fa-user-circle-o
@@ -27,31 +30,6 @@ menu:
     url: /friends
     icon: fa-address-book
 
-#menu:
-#  首页:
-#    url: /
-#    icon: fa-home
-#  标签:
-#    url: /tags
-#    icon: fa-tags
-#  分类:
-#    url: /categories
-#    icon: fa-bookmark
-#  归档:
-#    url: /archives
-#    icon: fa-archive
-#  视听:
-#    url: /av
-#    icon: fa-music
-#  关于:
-#    url: /about
-#    icon: fa-user-circle-o
-#  友情链接:
-#    url: /friends
-#    icon: fa-address-book
-#  Contact:
-#    url: /contact
-#    icon: fa-envelope
 
 # Index cover carousel configuration.
 # 首页封面轮播图的相关配置.
@@ -111,7 +89,7 @@ recommend:
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
 favicon: /favicon.png
-# logo: /medias/logo.png
+logo: /medias/logo.png
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -197,7 +175,7 @@ profile:
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: false
+  enable: true
   data:
     DeepLearning-500-questions:
       icon: fa-file-text-o
@@ -209,6 +187,11 @@ myProjects:
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+    hexo-blog-fly:
+      icon: fa-file-text-o
+      iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+      url: https://github.com/shw2018/hexo-blog-fly
+      desc: 我的博客源码开源小项目
 
 
 # config my skills informations in about page.
@@ -351,6 +334,12 @@ libs:
     gitalk: /libs/gitalk/gitalk.css
     jqcloud: /libs/jqcloud/jqcloud.css
     tocbot: /libs/tocbot/tocbot.css
+    #  洪卫 shw2018  add 2019.08.28
+    fancybox: https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css
+    justifiedGallery: https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css
+    share: /libs/share/css/share.min.css
+    my: /css/my.css
+    matery: /css/matery.css
   js:
     jquery: /libs/jquery/jquery-2.2.0.min.js
     materialize: /libs/materialize/materialize.min.js # 1.0.0
@@ -367,6 +356,23 @@ libs:
     gitalk: /libs/gitalk/gitalk.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
+    #  洪卫 shw2018  add 2019.08.28
+    fancybox: https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js
+    justifiedGallery: https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js
+    lazyload: /libs/lazyload/jquery.lazyload.js
+    share: /libs/share/js/social-share.min.js
+    matery: /js/matery.js
+    search: /js/search.js
+    #  洪卫 shw2018  add 2019.09.10
+    sakura: /js/sakura.js
+    fireworks: /js/fireworks.js
+    wenzi: /js/wenzi.js
+    xuehuapiaoluo: /js/xuehuapiaoluo.js
+    instant.page: /js/instant.page.js
+    #  洪卫 shw2018  add 2019.09.15
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -423,6 +429,56 @@ reprint:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: true
 
+# 洪卫 shw2018 add 2019.09.09
+# 页面樱花飘落动效
+sakura:
+  enable: true
+
+# 鼠标点击烟花爆炸动效
+fireworks:
+  enable: true
+
+# 洪卫 shw2018 add 2019.09.10
+# 天气控件 Weather Widget
+weather:
+  enable: true
+
+# 洪卫 shw2018 add 2019.09.10
+# 鼠标点击文字特效 
+wenzi:
+  enable: true
+
+# 洪卫 shw2018 add 2019.09.10
+# 背景雪花飘落特效
+xuehuapiaoluo:
+  enable: true
+
+# Tidio online contact 
+tidio:
+  enable: true
+  public_key: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# 洪卫 shw2018 add 2019.09.15
+#背景canvas-nest
+canvas_nest:
+  enable: true
+  color: 0,0,255 #线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 0,0,255 #交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  opacity: 0.8 # 线条透明度（0~1）, 默认: 0.5
+  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
+  count: 150 # 线条的总数量, 默认: 99
+
+#背景静止彩带
+ribbon:
+  enable: false
+  size: 150 #彩带大小, 默认: 90
+  alpha: 0.6 #彩带透明度 (0 ~ 1), 默认: 0.6
+  zIndex: -1 #背景的z-index属性，css属性用于控制所在层的位置, 默认: -1
+  click_to_change: false  #设置是否每次点击都更换彩带
+
+#背景动态彩带
+ribbon_dynamic:
+  enable: true 
 
 
 

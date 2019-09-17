@@ -1,4 +1,3 @@
-//  shw2018 洪卫  modify 2019.08.10
 $(function () {
     /**
      * 添加文章卡片hover效果.
@@ -41,6 +40,8 @@ $(function () {
      */
     let fixFooterPosition = function () {
         $('.content').css('min-height', window.innerHeight - 165);
+        // $('.hbe-input-container').css('min-height', window.innerHeight - 165);
+
     };
 
     /**
@@ -109,10 +110,10 @@ $(function () {
             showThumbByDefault: false  //2018.08.14
         });
 
-        /*网站加载逻辑问题 网站加载逻辑问题：图片最后加载 修改时间：2019.08.14*/
-        $(document).find('img[data-original]').each(function () {
-            $(this).parent().attr("href", $(this).attr("data-original"));
-        });
+        /*网站加载逻辑问题 网站加载逻辑问题：图片最后加载 洪卫 shw2018 modify 修改时间：2019.08.14*/
+        // $(document).find('img[data-original]').each(function () {
+        //     $(this).parent().attr("href", $(this).attr("data-original"));
+        // });
 
         // progress bar init
         const progressElement = window.document.querySelector('.progress-bar');
@@ -148,4 +149,26 @@ $(function () {
             $backTop.slideDown(300);
         }
     });
+
+    // 增加二级菜单功能 洪卫 shw2018 add 2019.09.17
+    $(".nav-menu>li").hover(function(){
+		$(this).children('ul').stop(true,true).show();
+		$(this).addClass('nav-show').siblings('li').removeClass('nav-show');
+		
+	},function(){
+		$(this).children('ul').stop(true,true).hide();
+		$('.nav-item.nav-show').removeClass('nav-show');
+	})
+	
+    $('.m-nav-item>a').on('click',function(){
+            if ($(this).next('ul').css('display') == "none") {
+                $('.m-nav-item').children('ul').slideUp(300);
+                $(this).next('ul').slideDown(300);
+                $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
+            }else{
+                $(this).next('ul').slideUp(300);
+                $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
+            }
+    });
+
 });

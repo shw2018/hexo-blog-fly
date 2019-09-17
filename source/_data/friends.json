@@ -1,16 +1,16 @@
 [
     {
+	    "avatar": "/medias/avatars/hwsun.jpg",
+	    "name": "洪卫の博客",
+	    "introduction": "UESTC CVer",
+	    "url": "http://sunhwee.com",
+	    "title": "偷看一下"
+    },{
         "name": "IVIPC",
         "url": "http://ivipc.uestc.edu.cn/",
         "title": "访问主页",
         "introduction": "UESTC智能视觉信息处理与通信实验室欢迎您的加入！",
         "avatar": "/medias/avatars/ivipc.png"
-    },{
-	    "avatar": "http://sunhwee.com/favicon.png",
-	    "name": "洪卫の小号",
-	    "introduction": "这是一个博客小号，之前建的，备用",
-	    "url": "http://sunhwee.github.io",
-	    "title": "偷看一下"
     },{
         "name": "Blinkfox",
         "url": "https://blinkfox.github.io",

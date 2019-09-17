@@ -6,6 +6,11 @@
     .valine-card .card-content {
         padding: 20px 20px 5px 20px;
     }
+    /* valine 评论框增加背景图片 */
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("<%- theme.valine.background %>") 100% 100% no-repeat;
+    }
 
     #vcomments input[type=text],
     #vcomments input[type=email],
@@ -234,6 +239,11 @@
         left: unset;
         visibility: visible;
     }
+
+    /* 修复评论第一行位置错位 */
+    .v .vlist .vcard {
+    padding-top: 2.5em !important ;
+    }
 </style>
 
 <div class="card valine-card" data-aos="fade-up">
@@ -242,6 +252,9 @@
 
 <script src="/libs/valine/av-min.js"></script>
 <script src="/libs/valine/Valine.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/libs//libs/jQuery-emoji/dist/css/jquery.emoji.css">
+<script src="/libs//libs/jQuery-emoji/dist/js/jquery.emoji.min.js"></script>
+<script src="/libs//libs/jQuery-emoji/dist/js/emoji.list.js"></script> -->
 <script>
     new Valine({
         el: '#vcomments',
@@ -253,6 +266,32 @@
         avatar: '<%- theme.valine.avatar %>',
         pageSize: '<%- theme.valine.pageSize %>',
         lang: '<% if (config.language == "zh-CN") {  %>zh-cn<% } else { %>en<% } %>',
-        placeholder: '<%= theme.valine.placeholder %>'
+        placeholder: '<%= theme.valine.placeholder %>',
+
     });
+
+//     function parse_emoji() {
+//     jQuery(".vcontent").emojiParse({
+//       basePath: '/libs/jQuery-emoji/images/emoji',
+//       icons: emojiLists   // 注：详见 js/emoji.list.js
+//     });
+//   }
+  
+//   setTimeout(function() {
+//     // jQuery emoji 解析
+//     parse_emoji();
+//     // jquery emoji 初始化
+//     jQuery(".veditor").emoji({
+//       showTab: true,
+//       animation: 'slide',
+//       basePath: '/libs/jQuery-emoji/images/emoji',
+//       icons: emojiLists  // 注：详见 js/emoji.list.js
+//     });
+//     jQuery(".vmore").on("click", function() {
+//       setTimeout(function() {
+//         parse_emoji();
+//       }, 500);
+//     });
+//   }, 800)
+
 </script>

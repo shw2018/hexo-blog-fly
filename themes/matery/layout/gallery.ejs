@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/css/gallery.css">
+
+<link rel="stylesheet" type="text/css" href="<%- theme.libs.css.fancybox %>">
+<link rel="stylesheet" type="text/css" href="<%- theme.libs.css.justifiedGallery %>">
+
+<%- partial('_partial/post-cover') %>
+
+<%
+let galleries = [];
+if (site.data && site.data.galleries) {
+    galleries = site.data.galleries;
+}
+var pageTitle = page.title;
+function getCurrentGallery(galleries, pageTitle) {
+    for (let i = 0; i < galleries.length; i++) {
+        if (galleries[i]['name'] == pageTitle) {
+            return galleries[i];
+        }
+    }
+}
+var currentGallery = getCurrentGallery(galleries, pageTitle)
+
+var photos = currentGallery.photos;
+
+let imageStr = ''
+
+for (var i = 0, len = photos.length; i < len; i++) {
+    var photo = photos[i];
+
+<!-- 洪卫 shw2018  modify  2019.08.28  -->
+<!-- 这儿的网址：http://sunhwee.com/ 改为你图片放的位置的网址，比如你用Github图床的话，就改为你图床的网址 -->
+    imageStr += "<a href=\"https://raw.githubusercontent.com/shw2018/Gallery/master/gallery/" + photo + "\"\n" +
+            "     class=\"photo-item\" rel=\"example_group\"\n" +
+            "     data-fancybox=\"images\">\n" +
+            "      <img src=\"https://raw.githubusercontent.com/shw2018/Gallery/master/gallery_tiny/" + photo + "\"\n" +
+            "       alt=" + photo + ">\n" +
+            "    </a>"
+}
+%>
+
+<!--   "  <p class=\"photo-name\">" + photo + "</p>\n" +
+文件名先注释掉  -->
+
+<!-- 不加密写法 -->
+<!-- <div class="container">
+    <div class="photo-wrapper">
+        <div class="waterfall" id="mygallery">
+            <%- imageStr %>
+        </div>
+    </div>
+</div> -->
+
+<!-- 洪卫 shw2018  modify  2019.08.29  -->
+<!-- 加密写法 -->
+<div class="container">
+    <div class="photo-wrapper">
+        <% if (page.password ) { %>
+
+            <!-- <script src="/lib/crypto-js.js"></script> -->
+            <script src="/js/crypto-js.js"></script>
+            <script src="/js/gallery-encrypt.js"></script>
+            <div id="hbe-security">
+                <div class="hbe-input-container">
+                    <input type="password" class="hbe-form-control" id="pass"  placeholder="请输入密码查看内容"/>
+                    <a href="javascript:;" class="btn-decrypt" id="btn_decrypt">解密</a>
+                </div>
+            </div>
+            <div  id="mygallery">
+                <div class="waterfall" id="encrypt-blog" style="display:none">
+                    <%- aes(imageStr, page.password) %>
+                </div>
+            </div>
+            
+        <% } else { %>
+            <div class="waterfall" id="encrypt-blog">
+                <%- imageStr %>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<script src="<%- theme.libs.js.lazyload %>"></script>
+<script src="<%- theme.libs.js.fancybox %>"></script>
+<script src="<%- theme.libs.js.justifiedGallery %>"></script>
+
+<script>
+  // $(".waterfall").lazyload();
+
+$("a[rel=example_group]").fancybox();
+//  不加密写法
+// $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
+$("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
+
+</script>

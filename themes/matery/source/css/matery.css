@@ -1,4 +1,3 @@
-/* shw2018 洪卫  modify 2019.08.05 */
 /*全局基础样式*/
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
@@ -34,7 +33,7 @@ body {
     color: #34495e;
 }
 
-h1 {
+/* h1 {
     margin: 48px 0 22px -5px;
     font-size: 2.0rem;
     font-weight: bold;
@@ -73,6 +72,47 @@ h6 {
     margin: 22px 0 4px -4px;
     font-size: 1.1rem;
     line-height: 1.1rem;
+} */
+/* 洪卫 shw2018 modify 2019.08.31 */
+h1 {
+    margin: 38px 0 22px -5px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    line-height: 2.0rem;
+}
+
+h2 {
+    margin: 32px 0 18px -5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+}
+
+h3 {
+    margin: 28px 0 15px -4px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+h4 {
+    margin: 24px 0 12px -4px;
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.45rem;
+}
+
+h5 {
+    margin: 20px 0 8px -4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+}
+
+h6 {
+    margin: 16px 0 4px -4px;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
 }
 
 p {
@@ -93,7 +133,7 @@ blockquote {
     background-color: rgba(66, 185, 131, .1);
 }
 
-/*源文件的代码行样式
+/*原文件的代码行样式
 pre {
     padding: 1.5rem !important;
     margin: 1rem 0 !important;
@@ -103,7 +143,7 @@ pre {
     tab-size: 4;
 }
 */
-/*修改一下2019.08.14*/
+/*修改一下才能正确显示行号,而不是一条竖线 洪卫 shw2018 2019.08.14  */
 pre {
     padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
     margin: 1rem 0 !important;
@@ -162,7 +202,8 @@ mark {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 5px;
+    /* 原值 10px */
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 }
 
@@ -176,7 +217,8 @@ mark {
 
 .bg-color {
     background-image: linear-gradient(to right, #bf30ac 0%, #0f9d58 100%);
-    opacity: 0.7;
+    opacity: 0.9;
+    /* 透明度*/
 }
 
 .text-color {
@@ -243,20 +285,22 @@ header .side-nav .mobile-head {
 }
 
 header .side-nav .mobile-head img {
-    margin-top: 30px;
+    margin-top: 15px;
+    /* 调整移动端头像位置，原值 30px; */
     width: 75px;
     height: 75px;
 }
 
 header .side-nav .mobile-head .logo-name {
-    margin-top: 0px;/*修改移动端侧边栏顶部没有图标时显示不全，改为0即可，原值-30px和上面img的magin对应*/
-    padding-left: 10px;
+    margin-top: -30px;
+    /*修改移动端侧边栏顶部没有图标时显示不全，改为0即可，原值-30px和上面img的magin对应*/
+    /* padding-left: 10px; */
     font-size: 1.5rem;
 }
 
 header .side-nav .mobile-head .logo-desc {
     margin-top: -10px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     padding-bottom: 10px;
     font-size: 0.8rem;
     line-height: 1.3rem;
@@ -377,11 +421,14 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    -webkit-animation: rainbow 30s infinite;
+    /* 原值 60s, 洪卫 modify 2019.08*/
+    animation: rainbow 30s infinite;
+    /* 原值 60s, 洪卫 modify 2019.08*/
 }
 
-.bg-cover:before, .bg-cover:after {
+.bg-cover:before,
+.bg-cover:after {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -418,7 +465,7 @@ header .go-back i {
 }
 
 @-webkit-keyframes rainbow {
-    0%,
+    /* 0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
         background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
@@ -454,11 +501,11 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 
 }
 
-@keyframes rainbow {
+/* @keyframes rainbow {
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -496,6 +543,34 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
+} */
+/* 换成:红橙黄绿青蓝紫 背景渐变 洪卫 shw2018  add  2019.08.30  */
+@keyframes rainbow {
+    /* 0%,
+    100% {
+        background: rgb(255, 0, 0);
+        background: linear-gradient(45deg, rgba(255, 0, 0, 0.3) 0%, rgba(255, 165, 0, 0.3) 100%);
+    }
+    16% {
+        background: rgb(255, 165, 0);
+        background: linear-gradient(45deg, rgba(255, 165, 0, 0.3) 0%, rgba(255, 255, 0, 0.3) 100%);
+    }
+    32% {
+        background: rgb(255, 255, 0);
+        background: linear-gradient(45deg, rgba(255, 255, 0, 0.3) 0%, rgba(0, 255, 0, 0.3) 100%);
+    }
+    48% {
+        background: rgb(0, 255, 0);
+        background: linear-gradient(45deg, rgba(0, 255, 0, 0.3) 0%, rgba(0, 127, 255, 0.3) 100%);
+    }
+    64% {
+        background: rgb(0, 127, 255);
+        background: linear-gradient(45deg, rgba(0, 127, 255, 0.3) 0%, rgba(0, 0, 255, 0.3) 100%);
+    }
+    80% {
+        background: rgb(0, 0, 255);
+        background: linear-gradient(45deg, rgba(0, 0, 255, 0.3) 0%, rgba(139, 0, 255, 0.3) 100%);
+    } */
 }
 
 .carousel .indicators {
@@ -541,7 +616,7 @@ header .go-back i {
 
 .music,
 .dplayer-video {
-    box-shadow: 0 5px 20px 0 rgba(0,0,0,.2), 0 10px 20px -12px rgba(0,0,0,.5) !important;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 10px 20px -12px rgba(0, 0, 0, .5) !important;
 }
 
 #recommend-sections {
@@ -549,8 +624,12 @@ header .go-back i {
     padding-top: 30px;
 }
 
-.index-card .card .card-content {
+/* .index-card .card .card-content {
     padding: 20px 40px;
+} */
+/* 洪卫 shw2018 modify 2019.08.31 */
+.index-card .card .card-content {
+    padding: 5px 5px;
 }
 
 @media only screen and (min-width: 1418px) {
@@ -574,12 +653,15 @@ header .go-back i {
 }
 
 .recommend .row .col {
-    padding: 0 1.25rem;
+    padding: 0 1.0rem;
+    /*原值1.25rem*/
 }
 
 .recommend .title {
-    margin-top: 20px;/*原值25*/
-    margin-bottom: 20px;/*原值25*/
+    margin-top: 10px;
+    /*原值25*/
+    margin-bottom: 10px;
+    /*原值25*/
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
@@ -706,7 +788,10 @@ article a:hover {
 }
 
 article .card {
-    border-radius: 8px;
+    border-radius: 5px;
+    /*原值 8px*/
+    overflow: hidden;
+    /* 解决文章卡片上方border-radius失效的bug, 洪卫 shw2018 add 2019.08.31 */
 }
 
 article .card-image {
@@ -826,7 +911,7 @@ article .article-tags .chip {
 
 /* 修改小屏幕下文章详情table样式. */
 @media only screen and (max-width: 550px) {
-    #articleContent table{
+    #articleContent table {
         table-layout: fixed;
     }
 }
@@ -840,8 +925,8 @@ article .article-tags .chip {
 
 #artDetail .card {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
-    0 5px 15px rgba(0, 0, 0, .07),
-    0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+        0 5px 15px rgba(0, 0, 0, .07),
+        0 2px 5px -5px rgba(0, 0, 0, .1) !important;
 }
 
 #artDetail .tag-cate {
@@ -853,8 +938,13 @@ article .article-tags .chip {
     text-transform: none !important;
 }
 
-#artDetail .article-info {
+/* #artDetail .article-info {
     padding: 20px 30px 1px 40px;
+    margin-bottom: -5px;
+} */
+/* 洪卫 shw2018 modify 2019.08.31 */
+#artDetail .article-info {
+    padding: 20px 20px 1px 25px;
     margin-bottom: -5px;
 }
 
@@ -938,11 +1028,18 @@ article .article-tags .chip {
     }
 }
 
-@media only screen and (min-width: 993px) {
+/* @media only screen and (min-width: 993px) {
     #artDetail .article-card-content {
         padding: 0 50px 20px 50px;
     }
+} */
+/* 洪卫 shw2018 modify 2019.08.31 */
+@media only screen and (min-width: 993px) {
+    #artDetail .article-card-content {
+        padding: 0 25px 20px 25px;
+    }
 }
+
 /*下面连着三段是老版reprint样式*/
 #artDetail .reprint1 {
     margin: 15px 0 5px 0;
@@ -992,7 +1089,7 @@ article .article-tags .chip {
     color: #42b983;
     font-weight: 500;
     text-decoration: underline;
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
 #articleContent .img-item {
@@ -1008,7 +1105,7 @@ article .article-tags .chip {
 #articleContent video {
     display: block;
     margin: 30px auto;
-    box-shadow: 0 5px 35px 0 rgba(0,0,0,.2), 0 10px 35px -11px rgba(0,0,0,.6);
+    box-shadow: 0 5px 35px 0 rgba(0, 0, 0, .2), 0 10px 35px -11px rgba(0, 0, 0, .6);
     cursor: pointer;
 }
 
@@ -1034,12 +1131,15 @@ article .article-tags .chip {
     list-style-type: circle;
 }
 
-#articleContent table, th, td {
+#articleContent table,
+th,
+td {
     padding: 12px 13px;
     border: 1px solid #dfe2e5;
 }
 
-table tr:nth-child(2n), thead {
+table tr:nth-child(2n),
+thead {
     background-color: #fafafa;
 }
 
@@ -1052,7 +1152,8 @@ table tr:nth-child(2n), thead {
     min-width: 80px;
 }
 
-#articleContent [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+#articleContent [type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
     position: inherit;
     margin-left: -1.3rem;
     margin-right: 0.4rem;
@@ -1444,7 +1545,8 @@ table tr:nth-child(2n), thead {
     padding: 0;
     color: #fff;
     border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);;
+    background: radial-gradient(#4cbf30, #0f9d58);
+    ;
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1496,7 +1598,8 @@ table tr:nth-child(2n), thead {
     padding: 3.8rem 1.5rem 0.8rem 1.5rem;
 }
 
-.post-charts, .title,
+.post-charts,
+.title,
 .my-projects .title,
 .my-skills .title,
 .my-gallery .title {
@@ -1619,7 +1722,8 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    ;
     border: 1px solid #4cbf30;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
@@ -1646,13 +1750,17 @@ footer {
     padding-bottom: 1px;
 }
 
+/* 洪卫 shw2018 modify 2019.09.11 */
 footer .social-statis {
-    margin-top: 10px;
+    margin-top: 26px;
+    /* 原值 10px; */
     position: relative;
 }
 
+/* 洪卫 shw2018 modify 2019.09.11 */
 footer a {
-    color: #fff;
+    /* color: #fff; */
+    color: #dbdbdb;
 }
 
 footer .copy-right {
@@ -1708,7 +1816,8 @@ footer .copy-right {
 .top-scroll {
     display: none;
     position: fixed;
-    right: 20px;
+    right: 15px;
+    /* 20px*/
     bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0;
@@ -1763,11 +1872,15 @@ footer .copy-right {
 }
 
 .img-shadow {
-    box-shadow: 0 5px 25px 0 rgba(0,0,0,.2), 0 10px 30px -11px rgba(0,0,0,.6)
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2), 0 10px 30px -11px rgba(0, 0, 0, .6)
 }
 
-.img-margin {
+/* .img-margin {
     margin: 25px auto 10px auto;
+} */
+/* 洪卫 shw2018 modify 2019.08.31 */
+.img-margin {
+    margin: 2px auto 5px auto;
 }
 
 .caption {
@@ -1799,7 +1912,8 @@ footer .copy-right {
     /* use this value to count block height */
     line-height: 1.5em;
     /* max-height = line-height (1.2) * lines max number (3) */
-    max-height: 4.5em;
+    max-height: 3em;
+    /* 原值4.5em三行,改为固定两行显示为3em 洪卫  2019.08.31*/
     /* fix problem when last visible word doesn't adjoin right side  */
     text-align: justify;
     /* place for '...' */
@@ -1834,3 +1948,126 @@ footer .copy-right {
     background: white;
 }
 
+/* 二级菜单样式定义 洪卫 shw2018 add 2019.09.17 */
+.nav-menu {}
+
+.nav-menu li .sub-nav {
+    position: absolute;
+    top: 77px;
+    list-style: none;
+    margin-left: -20px;
+    display: none;
+}
+
+.nav-menu li .sub-nav li {
+    text-align: center;
+    clear: left;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+}
+
+.nav-menu li .sub-nav li a {
+    height: 34px;
+    line-height: 34px;
+    width: 138px;
+    padding: 0px;
+    display: inline-block;
+    border-radius: 5px;
+    color: #000;
+}
+
+.nav-show i[aria-hidden=true] {
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.menus_item_child {
+    background-color: rgba(255, 255, 255, .8);
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 20px -4px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 20px -4px rgba(0, 0, 0, .5);
+    display: none;
+    opacity: 0.98;
+    -ms-filter: none;
+    filter: none;
+    -webkit-animation: sub_menus .3s .1s ease both;
+    -moz-animation: sub_menus .3s .1s ease both;
+    -o-animation: sub_menus .3s .1s ease both;
+    -ms-animation: sub_menus .3s .1s ease both;
+    animation: sub_menus .3s .1s ease both;
+}
+
+.menus_item_child:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, .8)
+}
+
+.m-nav-item {
+    position: relative;
+    left: 45px
+}
+
+.m-nav-item ul {
+    display: none;
+    background: rgba(255, 255, 255, .1);
+}
+
+.m-nav-item ul li {
+    width: 245px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.m-nav-show .m-icon {
+    -webkit-transform: rotate(90deg) !important;
+    -moz-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.m-nav-show .m-nav-item>a:hover {
+    color: #FFF;
+    background: rgba(255, 255, 255, .8);
+}
+
+.m-nav-show>a:before,
+.m-nav-item>a:hover:before {
+    opacity: 1;
+}
+
+.m-nav-item .m-icon {
+    position: absolute;
+    right: 65px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-item li:hover a {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
