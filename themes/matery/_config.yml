@@ -17,6 +17,18 @@ menu:
   AV:
     url: /AV
     icon: fa-music
+  # List: 
+  # url: /List
+  # icon: fa-heartbeat
+  # children: 
+  #   -
+  #     name: 音乐
+  #     url: /List/music
+  #     icon: fa-music
+  #   -
+  #     name: 视频
+  #     url: /List/movies
+  #     icon: fa-film
   Galleries:
     url: /galleries
     icon: fa-photo
@@ -29,6 +41,7 @@ menu:
   Friends:
     url: /friends
     icon: fa-address-book
+
 
 
 # Index cover carousel configuration.
